@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="favorite-styles.css">
+
+    <title>My Favorite Program</title>
+</head>
+<body>
+    
+    <div class="jumbotron">
+        <h1>The Inventory Maintenance Program</h1>
+    </div>
+
+    <div class="mx-4">
+        <p>My favorite program, is a C# program called The Inventory Maintenance Program!</p>
+    <p>This program is a windows form application that keeps track of your inventory,
+        allows you to add or delete inventory items and filter items based on price range. 
+        This is a complex program that uses Classes and LINQ. 
+    </p>
+    </div>
+
+    <div class="mx-4">
+        <p>Here are some of the code from my program</p>
+    <pre>
+        <code>
+            
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace InventoryMaintenance
+{
+    public partial class frmNewItem : Form
+    {
+        public frmNewItem()
+        {
+            InitializeComponent();
+        }
+
+        private InvItem invItem = null;
+
+        public InvItem GetNewItem()
+        {
+            this.ShowDialog();
+            return invItem;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (IsValidData())
+            {
+                invItem = new InvItem(
+                    Convert.ToInt32(txtItemNo.Text),
+                    txtDescription.Text, 
+                    Convert.ToDecimal(txtPrice.Text)
+                );
+                this.Close();
+            }
+        }
+
+        private bool IsValidData()
+        {
+            return Validator.IsPresent(txtItemNo) &&
+                   Validator.IsInt32(txtItemNo) &&
+                   Validator.IsPresent(txtDescription) &&
+                   Validator.IsPresent(txtPrice) &&
+                   Validator.IsDecimal(txtPrice);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
+        </code>
+    </pre>
+    </div>
+
+<div class="program-section">
+    <div class="program-header">
+        <h2>Here is an image of how my program looks like</h2>
+    </div>
+
+    <div>
+        <img class="program-images" src="/fav-program-img.png" alt="Program showing all inventory items">
+    </div>
+
+    <div>
+        <img class="program-images" src="/fav-program-img2.png" alt="Program filtering inventory items by price">
+    </div>
+
+</div>
+</body>
+</html>

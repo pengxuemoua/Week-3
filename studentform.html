@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="feedback-styles.css" type="text/css">
+
+    <!-- bootstrap verison 5.3.0 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+</head>
+<body class="m-3">
+
+
+    <div class="jumbotron">
+        <h1>Please provide Feedback. You may do so anonymously.</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="mx-5"> 
+                <p>As your college, we wish to better assist you,
+                    submit your feedback on your school experience.
+                </p><br>
+                <p>
+                    Quickly fill out this form and send us your feedback.
+                </p><br>
+                <p>Please include your contact information as well.</p><br>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <form class="mx-5">
+            <div>
+                <label for="student-name">Name:</label> <input id="student-name" name="full-name" class="form-control" type="text"><br>
+                <label for="enter-email">Email:</label> <input id="enter-email" name="student-email" class="form-control" type="text"><br>
+                <label for="comments-section">Comments</label><br>
+                <textarea id="comments-section" class="form-control" required></textarea><br>
+
+            </div>
+
+            <label class="form-text">Are you a current student?</label>
+
+            <div class="form-check">
+                <input id="current-student" name="student-section" class="form-check-input" type="radio" checked>
+                <label for="current-student" class="form-check-label">Yes</label>
+            </div>
+
+            <div class="form-check">
+                <input id="non-student" name="student-section" class="form-check-input" type="radio">
+                <label for="non-student" class="form-check-label">No</label>
+            </div>
+
+            <div>
+                <input type="submit" class="btn btn-outline-success mt-4">
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+    
+
+    
+</body>
+</html>

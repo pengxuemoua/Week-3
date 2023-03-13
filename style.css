@@ -1,0 +1,30 @@
+#real-alert {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#real-alert:hover {
+    background-color: rgb(252, 67, 67);
+}
+
+#real-alert {
+    padding: 10px 50px;
+    background-color: red;
+    color: black;
+}
+
+
+#test-only {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: green;
+}
+
+#test-only:hover {
+    background-color: rgb(88, 194, 88);
+}
+
+

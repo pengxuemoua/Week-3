@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: linear-gradient(to bottom right, #BAD1C2, #FAD6A5);
+    color: #473C33;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #F0ECCF;
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+}

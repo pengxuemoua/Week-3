@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conference Registration Form</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="conference-styles.css" type="text/css">
+
+    <!-- bootstrap verison 5.3.0 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+</head>
+<body class="m-3">
+
+
+    <div class="jumbotron">
+        <h1>Please fill out the conference form below.</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="mx-5"> 
+                <p>We want parents to have the best experience possible during conferences.
+                    To better assist you, please fill out this form.</p><br>
+                <p>We appreciate the time you take to fill out this form. We look forward to meeting you!</p><br>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <form class="mx-5">
+            <div>
+                <label for="full-name">Name:</label> <input id="full-name" name="name" class="form-control" type="text" maxlength="70" required><br>
+                <label for="enter-password">Password:</label> <input id="enter-password" name="password" class="form-control" type="text" required><br>
+                <label for="enter-email">Email:</label> <input id="enter-email" name="student-email" class="form-control" type="text" required><br>
+                <label for="select-shirt">Select your free shirt: </label>
+                <select name="shirt-size" id="select-shirt" required>
+                    <option value="size">Select your size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br><br>
+
+                <label for="enter-DOB">Enter date of birth:</label> <input id="enter-DOB" name="DOB" class="form-control" type="date" required><br>
+
+            </div>
+
+            <label class="form-text">Would you like to receive email updates?</label>
+
+            <div class="form-check">
+                <input id="yes-update" name="email-update" class="form-check-input" type="radio" required>
+                <label for="yes-update" class="form-check-label">Yes</label>
+            </div>
+
+            <div class="form-check">
+                <input id="no-update" name="email-update" class="form-check-input" type="radio" required>
+                <label for="no-update" class="form-check-label">No</label>
+            </div><br>
+
+            <label for="">Choose sessions:</label>
+            <div>
+                <input type="checkbox" id="morning-session" name="session" required>
+                <label for="morning-session">Morning</label>
+            </div>
+            <div>
+                <input type="checkbox" id="afternoon-session" name="session" required>
+                <label for="afternoon-session">Afternoon</label>
+            </div><br>
+
+
+            <label for="comments-section">Special requests</label><br><textarea id="comments-section" class="form-control" rows="7" cols="70"></textarea><br>
+
+            <div>
+                <input type="submit" class="btn btn-outline-success mt-4">
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+    
+
+    
+</body>
+</html>
